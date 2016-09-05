@@ -1,0 +1,264 @@
+/*Columns*/
+$width:960px;
+$margin: 0px 5px 0px 5px;
+$height:50px;
+$background-color:grey;
+
+@mixin col($width,$margin,$height,$background-color) {
+	width:$width;
+	margin-left:$margin;
+	height: $height;
+	background-color: $background-color;
+
+}
+.col {
+       @include col(960px,$margin, 180px,#f2f2f2)
+}
+
+.col_1_12 {
+	@include col(65px,$margin, 180px, $background-color)
+}
+
+.col_2_12 {
+	@include col(140px,$margin, 100px, $background-color)
+}
+
+.col_3_12 {
+	@include col(215px, $margin, 100px, $background-color)
+}
+
+.col_4_12 {
+	@include col(290px, $margin, 100px, $background-color)
+}
+
+.col_5_12 {
+	@include col(365px, $margin, 100px, $background-color)
+}
+
+.col_6_12 {
+	@include col(440px, $margin, 100px, $background-color)
+}
+
+.col_7_12 {
+	@include col(515px, $margin, 100px, $background-color)
+}
+
+.col_8_12 {
+	@include col(590px, $margin, 50px, $background-color)
+}
+
+.col_9_12 {
+	@include col(665px, $margin, 100px, $background-color)
+}
+
+.col_10_12 {
+	@include col(740px, $margin, 100px, $background-color)
+}
+
+.col_11_12 {
+	@include col(815px, $margin, 100px, $background-color)
+}
+
+.col_12_12 {
+	@include col(890px, $margin, 100px, $background-color)
+}
+
+
+/*Layout*/
+$background-color:#f2f2f2;
+$max-width:890px;
+$margin:0px 35px 0px 35px;
+$border:1px #dfc7c7;
+$max-height:502px;
+
+
+body {
+	background-color:#f2f2f2;
+	width: auto;	
+	margin: 0px 0px 0px 0px;
+	overflow-x: hidden;
+	
+}
+
+.wrap {
+	margin-left:auto;
+	margin-right:auto;
+	width: 960px;
+}
+
+.row {
+	width: 100%;
+	background-color:#f2f2f2;
+	position: relative;
+	top: 0px;
+}
+
+/*Typography*/
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+
+$font-family: 'Source Sans Pro', sans-serif;
+header {
+	display:block;
+	background-color:#f2f2f2;
+
+	
+}
+
+/*Header*/
+
+.top_bar h5{
+	font-size: 14px;
+	font-family:$font-family;
+	float:right;
+	padding: 0px 35px 10px 10px; 
+}
+
+
+.logo img {
+	float:left;
+	margin: 60px 0px 10px 30px;
+	
+}
+
+ .button {
+    float: left;
+    border: 1px solid green
+}
+
+ .button-icon {
+    float: left;
+    border: 1px solid green;
+	background-image: url(/assets/images/basket.png); 
+}
+
+/*Menu*/
+
+nav {
+  background-color: #fefefe;
+  border-left: 1px solid #cbd7c9;
+  border-right: 1px solid #cbd7c9;
+  border-bottom: 1px solid #cbd7c9;
+  border-top: 1px solid #cbd7c9;
+  height: 70px;
+  width: 890px;
+  padding: 5px;
+  margin: 30px 0px 5px 30px;
+  float:left; }
+
+nav ul {
+	margin: 15px 0px 0px -25px
+}
+
+nav ul li {
+    font-family: $font-family;
+	font-size: 22px;
+	display:inline;
+	margin: 0px 5px 0px 5px;
+	
+}
+
+nav li:before {
+color: #cbc9bc;
+content: "|";
+padding-right:15px;
+}
+
+nav li:first-child:before {
+content: none;
+}
+
+
+
+/*Search*/
+.search{
+	position: relative;
+	margin-right: 20px;
+	margin-top: -25px;
+	width: 210px;
+	float: right;
+}
+.search input[type="text"]{
+	color: #D6D6D6;
+	border:1px solid #D6D6D6;
+	border-radius: 1em;
+	outline: none;
+	position: relative;
+	text-indent: 22px;
+	font-size: 0.875em;
+	padding: 0.2em;
+	width: 100%;
+	transition: border-color 0.3s;
+	-o-transition: border-color 0.3s;
+	-ms-transition: border-color 0.3s;
+	-moz-transition: border-color 0.3s;
+	-webkit-transition: border-color 0.3s;
+}
+
+.search input[type="submit"]{
+	position: absolute;
+	top: 0px;
+	background-image: url(assets/images/search.png) no-repeat 0px 3.5px;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	margin-left: 0.2em;
+}
+/*Slider*/
+
+@mixin slider ($background-color,$max-height){
+	background-color:$background-color;
+	max-height:$max-height;
+
+}
+
+.slider {
+	@include slider(#9ccd8c,960px);
+}
+
+.slider img{
+	bottom:0;
+	margin-left: 50%;
+	margin-right: 50%;
+}
+
+.hero {
+	@extend .slider;
+    @include slider(#ffe5e5,345px);
+	border:$border;
+
+}
+
+/*Products*/
+
+main {
+
+	float:left;
+	overflow:hidden;
+	background-color:$background-color;
+}
+
+.row {
+	float:left;
+}
+
+section {
+	
+	background-color:#fefefe;
+	max-width: 230px;
+	border:$border;
+	float:left;
+	padding:5px;
+}
+
+/*Footer*/
+
+footer {
+	background-color:#f2262c;
+	position:relative;
+	bottom:0;
+	float:left;
+	max-height: 245px;
+	width: 960px;
+	
+
+}
