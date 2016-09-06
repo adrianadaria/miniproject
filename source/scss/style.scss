@@ -3,64 +3,65 @@ $width:960px;
 $margin: 0px 5px 0px 5px;
 $height:50px;
 $background-color:grey;
-
-@mixin col($width,$margin,$height,$background-color) {
+$position:relative;
+@mixin col($width,$margin,$height,$background-color,$position) {
 	width:$width;
 	margin-left:$margin;
 	height: $height;
 	background-color: $background-color;
+	position:$position;
 
 }
 .col {
-       @include col(960px,$margin, 180px,#f2f2f2)
+       @include col(960px,$margin, 200px,#f2f2f2, relative)
 }
 
 .col_1_12 {
-	@include col(65px,$margin, 180px, $background-color)
+	@include col(65px,$margin, 180px, $background-color,relative)
 }
 
 .col_2_12 {
-	@include col(140px,$margin, 100px, $background-color)
+	@include col(140px,$margin, 100px, $background-color, relative)
 }
 
 .col_3_12 {
-	@include col(215px, $margin, 100px, $background-color)
+	@include col(215px, $margin, 100px, $background-color, relative)
 }
 
 .col_4_12 {
-	@include col(290px, $margin, 100px, $background-color)
+	@include col(290px, $margin, 100px, $background-color, relative)
 }
 
 .col_5_12 {
-	@include col(365px, $margin, 100px, $background-color)
+	@include col(365px, $margin, 100px, $background-color, relative)
 }
 
 .col_6_12 {
-	@include col(440px, $margin, 100px, $background-color)
+	@include col(440px, $margin, 100px, $background-color, relative)
 }
 
 .col_7_12 {
-	@include col(515px, $margin, 100px, $background-color)
+	@include col(515px, $margin, 100px, $background-color, relative)
 }
 
 .col_8_12 {
-	@include col(590px, $margin, 50px, $background-color)
+	@include col(590px, $margin, 50px, $background-color, relative)
 }
 
 .col_9_12 {
-	@include col(665px, $margin, 100px, $background-color)
+	@include col(665px, $margin, 100px, $background-color, relative)
 }
 
 .col_10_12 {
-	@include col(740px, $margin, 100px, $background-color)
+	@include col(740px, $margin, 100px, $background-color, relative)
 }
 
 .col_11_12 {
-	@include col(815px, $margin, 100px, $background-color)
+	@include col(815px, $margin, 100px, $background-color, relative)
 }
 
 .col_12_12 {
-	@include col(890px, $margin, 100px, $background-color)
+	@include col(890px, $margin, 100px, $background-color, relative)
 }
 
 
@@ -113,11 +114,29 @@ header {
 	padding: 0px 35px 10px 10px; 
 }
 
-
-.logo img {
-	float:left;
-	margin: 60px 0px 10px 30px;
+.container {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 960px;
+}
+.logo {
+background-color: red;
+	width: 515px;
+	height: 70px;
+	display: flex;
+   align-items: center;
 	
+}
+
+
+#inline {
+	
+	margin: 30px 0px 30px 0px;
+	background-color: pink;
+	width: 100%;
+	height: 50%;
 }
 
  .button {
@@ -134,18 +153,82 @@ header {
 /*Register*/
 
 .register {
-	float: right;
+	
 	background-color: #ffffff;
-	width: 365px;
-	margin: 0px 30px 0px 5px;
+	width: 300px;
+	
+	font-family: $font-family;
+	font-size: 16px;
+	
+	
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	-webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+ 
+  text-decoration: none;
+
+	
 
 }
-
+.register ul {
+	margin: 10px 10px 20px 20px
+}
 .register ul li {
 	display: inline;
-}
+	text-decoration: underline;
+	
 .register ul li a{
 	text-decoration: none;
+	color:black;
+}
+
+.register ul li a:hover {
+	color:red;
+}
+
+.register li:first-child:after {
+color: #cbc9bc;
+content: "|";
+padding-left:10px;
+
+}
+
+
+
+
+#register_button a{
+	color:white;
+	text-decoration: underline;
+}
+
+.btn {
+  background: #f15352;
+  background-image: -webkit-linear-gradient(top, #f15352, #f12d21);
+  background-image: -moz-linear-gradient(top, #f15352, #f12d21);
+  background-image: -ms-linear-gradient(top, #f15352, #f12d21);
+  background-image: -o-linear-gradient(top, #f15352, #f12d21);
+  background-image: linear-gradient(to bottom, #f15352, #f12d21);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Source Sans Pro;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #d60b04;
+  background-image: -webkit-linear-gradient(top, #d60b04, #8c0602);
+  background-image: -moz-linear-gradient(top, #d60b04, #8c0602);
+  background-image: -ms-linear-gradient(top, #d60b04, #8c0602);
+  background-image: -o-linear-gradient(top, #d60b04, #8c0602);
+  background-image: linear-gradient(to bottom, #d60b04, #8c0602);
+  text-decoration: none;
 }
 /*Menu*/
 
@@ -277,6 +360,4 @@ footer {
 	float:left;
 	max-height: 245px;
 	width: 960px;
-	
-
 }
