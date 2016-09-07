@@ -64,6 +64,11 @@ $position:relative;
 	@include col(890px, $margin, 100px, $background-color, relative)
 }
 
+.full {
+	@include col(100%, 10px 0px 10px 0px, auto, #9ccd8c, none);
+	z-index:-1;
+}
+
 
 /*Layout*/
 $background-color:#f2f2f2;
@@ -97,6 +102,12 @@ body {
 /*Typography*/
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
 
+
+@font-face {
+	font-family:Gotham Book;
+	src: url('assets/fonts/gotham-book.ttf');
+}
+
 $font-family: 'Source Sans Pro', sans-serif;
 header {
 	display:block;
@@ -122,7 +133,7 @@ header {
   width: 960px;
 }
 .logo {
-background-color: red;
+
 	width: 515px;
 	height: 70px;
 	display: flex;
@@ -177,8 +188,9 @@ background-color: red;
 	margin: 10px 10px 20px 20px
 }
 .register ul li {
-	display: inline;
+    display:inline;
 	text-decoration: underline;
+}
 	
 .register ul li a{
 	text-decoration: none;
@@ -199,7 +211,7 @@ padding-left:10px;
 
 
 
-#register_button a{
+#register_button a {
 	color:white;
 	text-decoration: underline;
 }
@@ -266,7 +278,14 @@ nav li:first-child:before {
 content: none;
 }
 
+nav a {
+	color:black;
+	text-decoration: none;
+}
 
+nav a:hover {
+	color:red;
+}
 
 /*Search*/
 .search{
@@ -306,28 +325,86 @@ content: none;
 }
 /*Slider*/
 
-@mixin slider ($background-color,$max-height){
-	background-color:$background-color;
-	max-height:$max-height;
+
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  background-color: #9ccd8c;
+  width: 100%;
+  z-index: 0;
 
 }
 
-.slider {
-	@include slider(#9ccd8c,960px);
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
 }
 
-.slider img{
-	bottom:0;
-	margin-left: 50%;
-	margin-right: 50%;
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 960px;
+  height: 500px;
+  background-color: #9ccd8c;
+  text-align: center;
+  line-height: 300px;
 }
 
-.hero {
-	@extend .slider;
-    @include slider(#ffe5e5,345px);
-	border:$border;
-
+.slider_info {
+	float: left;
+	text-align: left;
+	margin-left:100px;
+	font-size:28px;
+	font-style: bold;
+	width: 150px;
+	line-height: 30px;
+	font-family: Gotham Book;
+	
 }
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+ 
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+
+
+/*Hero section*/
+
+
 
 /*Products*/
 
@@ -360,4 +437,4 @@ footer {
 	float:left;
 	max-height: 245px;
 	width: 960px;
-}
+	}
