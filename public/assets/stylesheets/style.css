@@ -1,99 +1,99 @@
 /*Columns*/
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
-.col {
+header {
   width: 960px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 200px;
   background-color: #f2f2f2;
   position: relative; }
 
 .col_1_12 {
   width: 65px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 180px;
   background-color: grey;
   position: relative; }
 
 .col_2_12 {
   width: 140px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_3_12 {
   width: 215px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_4_12 {
   width: 290px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_5_12 {
   width: 365px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_6_12 {
   width: 440px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_7_12 {
   width: 515px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_8_12 {
   width: 590px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 50px;
   background-color: grey;
   position: relative; }
 
 .col_9_12 {
   width: 665px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_10_12 {
   width: 740px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_11_12 {
   width: 815px;
-  margin-left: 0px 5px 0px 5px;
+  margin: 0px 5px 0px 5px;
   height: 100px;
   background-color: grey;
   position: relative; }
 
 .col_12_12 {
   width: 890px;
-  margin-left: 0px 5px 0px 5px;
-  height: 100px;
+  margin: 0px 30px 0px 30px;
+  height: auto;
   background-color: grey;
   position: relative; }
 
 .full {
   width: 100%;
-  margin-left: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   height: auto;
   background-color: #9ccd8c;
   position: none;
@@ -139,7 +139,8 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  width: 960px; }
+  width: 890px;
+  margin: 0px 35px 0px 35px; }
 
 .logo {
   width: 515px;
@@ -165,7 +166,7 @@ header {
 /*Register*/
 .register {
   background-color: #ffffff;
-  width: 300px;
+  width: 365px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   display: flex;
@@ -233,8 +234,7 @@ nav {
   border-top: 1px solid #cbd7c9;
   height: 70px;
   width: 890px;
-  padding: 5px;
-  margin: 30px 0px 5px 30px;
+  margin: 35px 35px 0px 35px;
   float: left; }
 
 nav ul {
@@ -359,7 +359,28 @@ a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px; }
 
-/*Hero section*/
+/*Categories section*/
+.categories {
+  display: flex;
+  /* or inline-flex */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 30px 30px 30px 30px; }
+
+.cat_1 {
+  width: 290px;
+  height: 350px;
+  background-color: #BB0036;
+  display: flex;
+  align-items: center;
+  margin: 5px; }
+
+.cat_1 img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%; }
+
 /*Products*/
 main {
   float: left;
@@ -367,14 +388,22 @@ main {
   background-color: #f2f2f2; }
 
 .row {
-  float: left; }
+  width: 960px;
+  margin: 0px 30px 0px 30px;
+  height: auto;
+  background-color: #f2f2f2;
+  position: relative; }
 
 section {
   background-color: #fefefe;
-  max-width: 230px;
+  width: 215px;
+  height: 300px;
+  margin: 5px;
   border: 1px #dfc7c7;
-  float: left;
-  padding: 5px; }
+  float: left; }
+
+section img {
+  margin-left: 35px; }
 
 /*Footer*/
 footer {

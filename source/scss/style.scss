@@ -4,15 +4,26 @@ $margin: 0px 5px 0px 5px;
 $height:50px;
 $background-color:grey;
 $position:relative;
+$display:flex;
+$align-items:center;
+
 @mixin col($width,$margin,$height,$background-color,$position) {
 	width:$width;
-	margin-left:$margin;
+	margin:$margin;
 	height: $height;
 	background-color: $background-color;
 	position:$position;
-
 }
-.col {
+
+@mixin categories($width,$height,$background-color,$display,$align-items){
+	width:$width;
+	height: $height;
+	background-color: $background-color;
+	display:$display;
+	align-items: $align-items;
+}
+
+header {
        @include col(960px,$margin, 200px,#f2f2f2, relative)
 }
 
@@ -61,7 +72,7 @@ $position:relative;
 }
 
 .col_12_12 {
-	@include col(890px, $margin, 100px, $background-color, relative)
+	@include col(890px, 0px 30px 0px 30px, auto, $background-color, relative)
 }
 
 .full {
@@ -130,7 +141,8 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  width: 960px;
+  width: 890px;
+  margin:0px 35px 0px 35px;
 }
 .logo {
 
@@ -166,7 +178,7 @@ header {
 .register {
 	
 	background-color: #ffffff;
-	width: 300px;
+	width: 365px;
 	
 	font-family: $font-family;
 	font-size: 16px;
@@ -252,8 +264,7 @@ nav {
   border-top: 1px solid #cbd7c9;
   height: 70px;
   width: 890px;
-  padding: 5px;
-  margin: 30px 0px 5px 30px;
+  margin: 35px 35px 0px 35px;
   float:left; }
 
 nav ul {
@@ -402,8 +413,28 @@ a.control_next {
 
 
 
-/*Hero section*/
+/*Categories section*/
 
+.categories{
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin:30px 30px 30px 30px;
+}
+
+.cat_1 {
+       @include categories(290px,350px,#BB0036, flex,center);
+	   margin:5px;
+}
+
+.cat_1 img{
+	margin-left: auto;
+	margin-right:auto;
+	border-radius: 50%;
+	
+}
+	
 
 
 /*Products*/
@@ -416,16 +447,23 @@ main {
 }
 
 .row {
-	float:left;
+	@include col(960px, 0px 30px 0px 30px, auto, $background-color, relative)
 }
 
 section {
 	
 	background-color:#fefefe;
-	max-width: 230px;
+	width: 215px;
+	height:300px;
+	margin:5px;
 	border:$border;
 	float:left;
-	padding:5px;
+
+	
+}
+
+section img {
+	margin-left:35px;
 }
 
 /*Footer*/
