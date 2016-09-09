@@ -1,4 +1,6 @@
 /*Columns*/
+/*For Flexbox*/
+/*For Typography*/
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
 header {
   width: 960px;
@@ -23,9 +25,9 @@ header {
 
 .col_3_12 {
   width: 215px;
-  margin: 0px 5px 0px 5px;
-  height: 100px;
-  background-color: grey;
+  margin: 0px 30px 0px 35px;
+  height: 50px;
+  background-color: none;
   position: relative; }
 
 .col_4_12 {
@@ -86,7 +88,7 @@ header {
 
 .col_12_12 {
   width: 890px;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 30px 80px 30px;
   height: auto;
   background-color: grey;
   position: relative; }
@@ -99,7 +101,6 @@ header {
   position: none;
   z-index: -1; }
 
-/*Layout*/
 body {
   background-color: #f2f2f2;
   width: auto;
@@ -111,25 +112,55 @@ body {
   margin-right: auto;
   width: 960px; }
 
-.row {
-  width: 100%;
-  background-color: #f2f2f2;
-  position: relative;
-  top: 0px; }
-
 /*Typography*/
-@font-face {
-  font-family: Gotham Book;
-  src: url("assets/fonts/gotham-book.ttf"); }
-
 header {
   display: block;
   background-color: #f2f2f2; }
 
-/*Header*/
-.top_bar h5 {
+h1 {
+  font-family: "Source Sans Pro";
+  font-size: 34px;
+  line-height: 52px;
+  color: black;
+  font-weight: normal; }
+
+h2 {
+  font-family: "Source Sans Pro";
+  font-size: 26px;
+  line-height: 44px;
+  color: black;
+  font-weight: normal; }
+
+h3 {
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+  line-height: 36px;
+  color: black;
+  font-weight: normal; }
+
+h4 {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  line-height: 28px;
+  color: black;
+  font-weight: bold; }
+
+h5 {
+  font-family: "Source Sans Pro";
   font-size: 14px;
-  font-family: "Source Sans Pro", sans-serif;
+  line-height: 20px;
+  color: black;
+  font-weight: normal; }
+
+h6 {
+  font-family: "Source Sans Pro";
+  font-size: 12px;
+  line-height: 14px;
+  color: black;
+  font-weight: normal; }
+
+/*Header*/
+.top_bar h6 {
   float: right;
   padding: 0px 35px 10px 10px; }
 
@@ -329,11 +360,19 @@ nav a:hover {
   float: left;
   text-align: left;
   margin-left: 100px;
-  font-size: 28px;
-  font-style: bold;
-  width: 150px;
-  line-height: 30px;
-  font-family: Gotham Book; }
+  font-size: 70px;
+  font-weight: bold;
+  width: 200px;
+  line-height: 70px;
+  font-family: Gotham Book;
+  margin-top: 180px;
+  padding-left: 20px; }
+
+.slider_info h1 {
+  color: white;
+  font-family: Gotham Book;
+  font-size: 50px;
+  margin: 0px; }
 
 a.control_prev, a.control_next {
   position: absolute;
@@ -359,7 +398,7 @@ a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px; }
 
-/*Categories section*/
+/*Categories*/
 .categories {
   display: flex;
   /* or inline-flex */
@@ -371,39 +410,100 @@ a.control_next {
 .cat_1 {
   width: 290px;
   height: 350px;
-  background-color: #BB0036;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
-  margin: 5px; }
+  margin: 5px;
+  border: 1px solid #cbd7c9; }
 
 .cat_1 img {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%; }
 
+.cat_1 h4 {
+  justify-content: space-between; }
+
+.cat_info {
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
 /*Products*/
 main {
   float: left;
-  overflow: hidden;
-  background-color: #f2f2f2; }
+  overflow: hidden; }
+
+.color {
+  color: #f22826; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
 
 .row {
   width: 960px;
   margin: 0px 30px 0px 30px;
   height: auto;
-  background-color: #f2f2f2;
+  background-color: grey;
   position: relative; }
 
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fefefe;
   width: 215px;
   height: 300px;
   margin: 5px;
-  border: 1px #dfc7c7;
+  border: 1px solid #cbd7c9;
   float: left; }
 
+section:hover {
+  border: 1px solid #fb1613; }
+
 section img {
-  margin-left: 35px; }
+  margin: 10px auto 10px auto; }
+
+hr {
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  opacity: 0.5; }
+
+section p {
+  width: 150px;
+  font-size: 18px;
+  word-break: break-all; }
+
+.btn_price {
+  background: #ffa296;
+  background-image: -webkit-linear-gradient(top, #ffa296, #ff1100);
+  background-image: -moz-linear-gradient(top, #ffa296, #ff1100);
+  background-image: -ms-linear-gradient(top, #ffa296, #ff1100);
+  background-image: -o-linear-gradient(top, #ffa296, #ff1100);
+  background-image: linear-gradient(to bottom, #ffa296, #ff1100);
+  -webkit-border-radius: 29;
+  -moz-border-radius: 29;
+  border-radius: 29px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  border: solid #ff6363 2px;
+  text-decoration: none; }
+
+.btn_price:hover {
+  background: #ff1e00;
+  background-image: -webkit-linear-gradient(top, #ff1e00, #ff1100);
+  background-image: -moz-linear-gradient(top, #ff1e00, #ff1100);
+  background-image: -ms-linear-gradient(top, #ff1e00, #ff1100);
+  background-image: -o-linear-gradient(top, #ff1e00, #ff1100);
+  background-image: linear-gradient(to bottom, #ff1e00, #ff1100);
+  text-decoration: none; }
 
 /*Footer*/
 footer {
