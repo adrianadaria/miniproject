@@ -2,6 +2,7 @@
 /*For Flexbox*/
 /*For Typography*/
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
 @media only screen and (min-width: 960px) {
   header {
     width: 960px;
@@ -333,9 +334,6 @@
     padding: 4% 3%;
     width: auto;
     height: auto;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
     opacity: 0.8;
     cursor: pointer; }
   a.control_prev:hover, a.control_next:hover {
@@ -345,6 +343,31 @@
   a.control_next {
     right: 0;
     border-radius: 2px 0 0 2px; }
+  .btn_price {
+    background: #ffa296;
+    background-image: -webkit-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -moz-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -ms-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -o-linear-gradient(top, #ffa296, #ff1100);
+    background-image: linear-gradient(to bottom, #ffa296, #ff1100);
+    -webkit-border-radius: 29;
+    -moz-border-radius: 29;
+    border-radius: 29px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    border: solid #ff6363 2px;
+    text-decoration: none; }
+  .btn_price:hover {
+    background: #ff1e00;
+    background-image: -webkit-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -moz-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -ms-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -o-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: linear-gradient(to bottom, #ff1e00, #ff1100);
+    text-decoration: none; }
   /*Categories*/
   .categories {
     display: flex;
@@ -418,31 +441,6 @@
     width: 150px;
     font-size: 18px;
     word-break: break-all; }
-  .btn_price {
-    background: #ffa296;
-    background-image: -webkit-linear-gradient(top, #ffa296, #ff1100);
-    background-image: -moz-linear-gradient(top, #ffa296, #ff1100);
-    background-image: -ms-linear-gradient(top, #ffa296, #ff1100);
-    background-image: -o-linear-gradient(top, #ffa296, #ff1100);
-    background-image: linear-gradient(to bottom, #ffa296, #ff1100);
-    -webkit-border-radius: 29;
-    -moz-border-radius: 29;
-    border-radius: 29px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px 20px 10px 20px;
-    border: solid #ff6363 2px;
-    text-decoration: none; }
-  .btn_price:hover {
-    background: #ff1e00;
-    background-image: -webkit-linear-gradient(top, #ff1e00, #ff1100);
-    background-image: -moz-linear-gradient(top, #ff1e00, #ff1100);
-    background-image: -ms-linear-gradient(top, #ff1e00, #ff1100);
-    background-image: -o-linear-gradient(top, #ff1e00, #ff1100);
-    background-image: linear-gradient(to bottom, #ff1e00, #ff1100);
-    text-decoration: none; }
   /*Footer*/
   footer {
     background-color: #f2262c;
@@ -499,6 +497,46 @@
     text-decoration: none; }
   a:hover {
     color: #fb1613; }
+  /*Typography*/
+  header {
+    display: block;
+    background-color: #f2f2f2; }
+  h1 {
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    line-height: 52px;
+    color: black;
+    font-weight: normal; }
+  h2 {
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    line-height: 44px;
+    color: black;
+    font-weight: normal; }
+  h3 {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    line-height: 36px;
+    color: black;
+    font-weight: normal; }
+  h4 {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    line-height: 28px;
+    color: black;
+    font-weight: bold; }
+  h5 {
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    font-weight: normal; }
+  h6 {
+    font-family: "Source Sans Pro";
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+    font-weight: normal; }
   /*Header*/
   .top_bar h6 {
     float: right;
@@ -524,7 +562,7 @@
     background-color: #ffffff;
     width: 300px;
     height: 20px;
-    font-family: Arial;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 12px;
     display: flex;
     justify-content: space-around;
@@ -678,20 +716,19 @@
     text-align: center;
     line-height: 30px; }
   .slider_info {
-    float: left;
-    text-align: left;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: bold;
-    width: 200px;
-    line-height: 70px;
-    font-family: Gotham Book;
-    margin-top: 20px;
-    padding-left: 20px; }
+    width: 100%;
+    margin-left: 220px;
+    bottom: 10px;
+    position: absolute;
+    font-family: Gotham Book; }
   .slider_info h1 {
     color: white;
     font-family: Gotham Book;
-    font-size: 50px;
-    margin: 0px; }
+    font-size: 20px;
+    margin: 0px;
+    line-height: 15px; }
   a.control_prev, a.control_next {
     position: absolute;
     top: 40%;
@@ -700,9 +737,6 @@
     padding: 4% 3%;
     width: auto;
     height: auto;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
     opacity: 0.8;
     cursor: pointer; }
   a.control_prev:hover, a.control_next:hover {
@@ -711,4 +745,66 @@
     border-radius: 0 2px 2px 0; }
   a.control_next {
     right: 0;
-    border-radius: 2px 0 0 2px; } }
+    border-radius: 2px 0 0 2px; }
+  .btn_price {
+    background: #ffa296;
+    background-image: -webkit-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -moz-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -ms-linear-gradient(top, #ffa296, #ff1100);
+    background-image: -o-linear-gradient(top, #ffa296, #ff1100);
+    background-image: linear-gradient(to bottom, #ffa296, #ff1100);
+    -webkit-border-radius: 29;
+    -moz-border-radius: 29;
+    border-radius: 29px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    border: solid #ff6363 2px;
+    text-decoration: none; }
+  .btn_price:hover {
+    background: #ff1e00;
+    background-image: -webkit-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -moz-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -ms-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: -o-linear-gradient(top, #ff1e00, #ff1100);
+    background-image: linear-gradient(to bottom, #ff1e00, #ff1100);
+    text-decoration: none; }
+  /*Categories*/
+  .categories {
+    display: flex;
+    /* or inline-flex */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px 5px 5px 5px;
+    width: 100%; }
+  .cat_1 {
+    width: 33.333%;
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #cbd7c9;
+    flex-direction: column; }
+  .cat_1:hover {
+    border: 1px solid #fb1613; }
+  .cat_1 img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 100px; }
+  .icon {
+    position: absolute;
+    margin-top: 80px;
+    opacity: 0.1; }
+  .cat_1 h4 {
+    color: #fb1613;
+    line-height: 0px; }
+  .center {
+    text-align: center; }
+  .center hr {
+    width: 15px;
+    opacity: 0; } }
