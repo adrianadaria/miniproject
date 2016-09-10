@@ -480,7 +480,19 @@
   .menu_footer li:first-child:before {
     content: none; }
   .social_footer {
-    flex-grow: 1; } }
+    flex-grow: 1; }
+  /*DETAIL PAGE*/
+  /*FILTER*/
+  .filter_name {
+    background-color: black;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 20px 0px 0px 60px;
+    float: left; } }
 
 @media only screen and (max-width: 959px) {
   .wrap {
