@@ -12,7 +12,35 @@
 <!--Slider-->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/slider.js"></script>
-  
+<!--Price range-->
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <!-- Javascript -->
+      <script>
+         $(function() {
+			 
+            $( "#slider-3" ).slider({
+               range:true,
+               min: 0,
+               max: 500,
+               values: [ 35, 200 ],
+               slide: function( event, ui 
+			   ) {
+                  $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+               }
+			 
+           });
+$("#slider-3 .ui-slider-range").css({"background":"red"});
+$("#slider-3 .ui-slider-handle").css({"border-color":"white"});
+$("#slider-3 .ui-slider-handle").css({"background":"white"});
+$("#slider-3 .ui-slider").css({"height":"0.5em"});
+$("#slider-3 .ui-slider").css({"width":"250px"});
+
+         $( "#price" ).val( "$" + $( "#slider-3" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-3" ).slider( "values", 1 ) );
+         });
+      </script>
 
 </head>
 <body>
@@ -66,13 +94,119 @@
     </header><!----div with col ends---->
 
 
-<label class="filter_name">FILTER</label>
-<div class="container">
-    <h2>hello</h2>
+<div class="filter_name">FILTER</div>
+
+	<div class="filter">
+               <div class="filter_flex">
+					<div class="products_filter">
+						
+						 <h3 class="brands">BRANDS</h3>
+								
+                                <div class="brands_column">
+                                   
+								<ul class="brands_1">
+									<li><a href="#">adidas</a></li>
+									<li><a href="#">nike</a></li>
+									<li><a href="#">camper</a></li>
+									<li><a href="#">superga</a></li>
+									<li><a href="#">timberland</a></li>
+									<li><a href="#">new balance</a></li>
+									<li><a href="#">converse</a></li>
+									<li><a href="#">puma</a></li>
+									<li><a href="#">kinetix</a></li>
+									
+								</ul>
+								<ul class="brand_2"">
+									<li><a href="#">tiger</a></li>
+									<li><a href="#">lacoste</a></li>
+									<li><a href="#">eebok</a></li>
+									<li><a href="#">cat</a></li>
+									<li><a href="#">dockers</a></li>
+									
+								</ul>
+                                </div>
+							</div>
+							<!---->
+							<div class="categories_filter">
+								
+                                <div class="cat-1" >
+                                         <h2>WOMAN</h2>
+                                              <a href=""><img class="cat-img" src="assets/images/women.jpg" /></a>
+                                               <img class="icon-filter" src="assets/images/women_icon.png"/>
+                                          <div class="clear"></div>
+
+                                            <span class="center">  <h5>TOTAL</h5>
+                                                                <h6>357 PRODUCTS</h6>
+                                                              <hr><hr><hr><hr><hr></span>
+                                </div>
+
+
+<div class="cat-1">
+  
+   <h2>MAN</h2>
+<a href=""><img class="cat-img"  src="assets/images/man.jpg" /></a>
+  <img class="icon-filter" src="assets/images/man_icon.png"/>
+ <div class="clear">
+</div>
+ <span class="center"> <h5>TOTAL</h5>
+  <h6>357 PRODUCTS</h6>
+   <hr><hr><hr><hr><hr></span>
+  
+  
+</div>
+<div class="cat-1">
+   <h2>KIDS</h2>
+ <a href=""> <img class="cat-img"  src="assets/images/kid.jpg" /></a>
+  <img class="icon-filter" src="assets/images/kid_icon.png"/>
+  <div class="clear">
+</div>
+ <span class="center">  <h5>TOTAL</h5>
+  <h6>357 PRODUCTS</h6>
+  <hr><hr><hr><hr><hr></span>
 </div>
 
-<!----product-details--->
+</div>
+
+ 
+							<div class="colors_filter">
+								<div class="products-colors">
+									<h3>SELECT COLOR </h3>
+									<li><a href="#"><span class="color1"> </span></a></li>
+									<li><a href="#"><span class="color2"> </span></a></li>
+									<li><a href="#"><span class="color3"> </span></a></li>
+									<li><a href="#"><span class="color4"> </span></a></li>
+									<li><a href="#"><span class="color5"> </span></a></li>
+									<li><a href="#"><span class="color6"> </span></a></li>
+									<li><a href="#"><span class="color7"> </span></a></li>
+									<li><a href="#"><span class="color8"> </span></a></li>
+									<li><a href="#"><span class="color9"> </span></a></li>
+									<li><a href="#"><span class="color10"> </span></a></li>
+									<li><a href="#"><span class="color11"> </span></a></li>
+									<li><a href="#"><span class="color12"> </span></a></li>
+									<li><a href="#"><span class="color13"> </span></a></li>
+									<li><a href="#"><span class="color14"> </span></a></li>
+									<li><a href="#"><span class="color15"> </span></a></li>
+									<li><a href="#"><span class="color16"> </span></a></li>
+									<li><a href="#"><span class="color17"> </span></a></li>
+									<li><a href="#"><span class="color18"> </span></a></li>
+									<li><a href="#"><span class="color19"> </span></a></li>
+									<li><a href="#"><span class="color20"> </span></a></li>
+									<div class="clear"> </div>
+								</div>
+								<div class="price-range">
+									<h3>PRICE RANGE</h3>
+      <div id="slider-3"></div>
+	  <input type="text" id="price">
+	  
+								</div>
+							</div>
+							
+						</div>
+					</div>
+	
 <div class="col_6_12">
+
+	
 							<h2>Men'sFootwear</h2>
 							<p>Hookset Handcrafted Fabric Chukka</p>
 					
