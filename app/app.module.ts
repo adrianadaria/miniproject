@@ -9,12 +9,14 @@ import { ProductComponent} from './product.component';
 import { CategoriesComponent} from './categories.component';
 import { SliderComponent} from './slider.component';
 import { ContactComponent} from './contact.component';
+import { routing } from './app.routing';
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   declarations: [
     AppComponent,

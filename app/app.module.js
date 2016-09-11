@@ -18,6 +18,7 @@ var product_component_1 = require('./product.component');
 var categories_component_1 = require('./categories.component');
 var slider_component_1 = require('./slider.component');
 var contact_component_1 = require('./contact.component');
+var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,7 +26,8 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,

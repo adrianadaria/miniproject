@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
   <my-slider></my-slider>
-  <my-categories></my-categories>
   
-  <my-products></my-products>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <router-outlet></router-outlet>
   <my-footer></my-footer>
   `,
   styles: [`

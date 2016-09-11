@@ -1,10 +1,10 @@
+ <my-categories></my-categories>
  <div class="wrap">
  <div class="row">
 
     
      <div class="prod" *ngFor="let product of products"
-        [class.selected]="product === selectedProduct"
-        (click)="onSelect(product)">
+        (click)="gotoDetail(product)">
         
 
    <img [src]="product.brandurl">

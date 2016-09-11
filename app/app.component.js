@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <my-slider></my-slider>\n  <my-categories></my-categories>\n  \n  <my-products></my-products>\n  <my-footer></my-footer>\n  ",
+            template: "\n  <my-slider></my-slider>\n  \n  <a routerLink=\"/contact\" routerLinkActive=\"active\">Contact</a>\n  <router-outlet></router-outlet>\n  <my-footer></my-footer>\n  ",
             styles: ["\n    .selected {\n      border:1px solid red;\n    }\n  \n  "]
         }), 
         __metadata('design:paramtypes', [])
