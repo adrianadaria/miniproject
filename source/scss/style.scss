@@ -64,7 +64,7 @@ header {
 }
 
 .col_4_12 {
-	@include col(290px, $margin, 100px, $background-color, relative)
+	@include col(290px, $margin, 500px, none, relative)
 }
 
 .col_5_12 {
@@ -548,7 +548,7 @@ main {
 	@include col(960px, 0px 30px 0px 30px, auto, $background-color, relative)
 }
 
-section {
+.prod {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -560,11 +560,11 @@ section {
 	float:left;
 }
 
-section:hover {
+.prod:hover {
 	border:1px solid #fb1613;
 }
 
-section img {
+.prod img {
 	margin: 10px auto 10px auto;
 }
 
@@ -576,7 +576,7 @@ hr
 	opacity:0.5;
 }
 
-section p {
+.prod p {
 	width: 150px;
 	font-size: 18px;
 	word-break: break-all;
@@ -976,13 +976,16 @@ select {
 	font-family: Arial;
 }
 
+
+
+
 /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     select {padding-right:18px}
 }
 
-label {position:relative}
-label:after {
+.right_price label {position:relative}
+.right_price label:after {
     content:'<>';
     font:12px "Arial", monospace;
     color:#616161;
@@ -996,7 +999,7 @@ label:after {
     position:absolute;
     pointer-events:none;
 }
-label:before {
+.right_price label:before {
     content:'';
     right:6px; top:0px;
     width:20px; height:20px;
@@ -1024,6 +1027,163 @@ label:before {
    position: absolute;
    color:red;
 }
+
+/*Product Tabs*/
+.tabs{
+	@include col(890px,110px 40px 60px 40px, auto,#fefefe, relative);
+	
+}
+
+
+.product-tabs input {
+	position: absolute;
+	z-index: 1000;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.product-tabs input#tab-2{
+display:block;
+}
+.product-tabs input#tab-3{
+display:block;
+}
+.product-tabs input#tab-4{
+display:block;
+}
+
+.product-tabs label {
+	background: white;
+	border-radius: 3px 3px 0 0;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: block;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+	cursor: pointer;
+	font-family: 'Source Sans Pro';
+}
+
+.product-tabs label:after {
+    content: '';
+	background: white;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	display: block;
+}
+
+
+.product-tabs label:first-of-type {
+    z-index: 5;
+}
+.tab-label-2 {
+    z-index: 4;
+}
+.tab-label-3 {
+    z-index: 3;
+}
+.tab-label-4 {
+    z-index: 2;
+}
+
+.product-tabs input:checked + label {
+    background: #ef2d24;
+	color:white;
+	z-index: 6;
+    -webkit-animation: page 0.3s linear;
+    -moz-animation: page 0.3s linear;
+    -ms-animation: page 0.3s linear;
+    -o-animation: page 0.3s linear;
+    animation: page 0.3s linear;
+}
+
+
+
+.tabs-content {
+	background: #fff;
+    width: 100%;
+	z-index: 5;
+	overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.1), 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 0 3px 3px 3px;
+	font-family: 'Source Sans Pro';
+	color:#a8a5a5;
+}
+
+.tabs-content div {
+    position: absolute;
+	top: 0;
+	padding: 0 20px 10px 20px;
+    opacity: 0;
+    -webkit-transition: all linear 0.0s;
+    -moz-transition: all linear 0.0s;
+    -o-transition: all linear 0.0s;
+    -ms-transition: all linear 0.0s;
+    transition: all linear 0.0s;
+}
+
+.tabs-content span{
+	color:red;
+}
+.tabs-content-1, .tabs-content-3, .tabs-content-2, .tabs-content-4{
+	-webkit-transform: translateX(-50px);
+	-moz-transform: translateX(-50px);
+	-o-transform: translateX(-50px);
+	-ms-transform: translateX(-50px);
+	transform: translateX(-50px);
+}
+
+
+
+.product-tabs input.tab-selector-1:checked ~ .tabs-content .tabs-content-1,
+.product-tabs input.tab-selector-2:checked ~ .tabs-content .tabs-content-2,
+.product-tabs input.tab-selector-3:checked ~ .tabs-content .tabs-content-3,
+.product-tabs input.tab-selector-4:checked ~ .tabs-content .tabs-content-4 {
+    -webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
+	z-index: 10;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all ease-out 0.5s 0.0s;
+    -moz-transition: all ease-out 0.5s 0.0s;
+    -o-transition: all ease-out 0.5s 0.0s;
+    -ms-transition: all ease-out 0.5s 0.0s;
+    transition: all ease-out 0.5s 0.0s;
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 959px) {
@@ -1502,7 +1662,7 @@ main {
 	@include col(100%, 80px 10px 80px 5px, auto, $background-color, relative)
 }
 
-section {
+.prod {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1514,11 +1674,11 @@ section {
 	float:left;
 }
 
-section:hover {
+.prod:hover {
 	border:1px solid #fb1613;
 }
 
-section img {
+.prod img {
 	margin: 10px auto 10px auto;
 }
 
@@ -1530,7 +1690,7 @@ hr
 	opacity:0.5;
 }
 
-section p {
+.prod p {
 	width: 150px;
 	font-size: 18px;
 	word-break: break-all;
