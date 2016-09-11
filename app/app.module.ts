@@ -4,6 +4,11 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { ProductDetailComponent } from './product-detail.component';
+import { FooterComponent} from './footer.component';
+import { ProductComponent} from './product.component';
+import { CategoriesComponent} from './categories.component';
+import { SliderComponent} from './slider.component';
+
 
 @NgModule({
   imports: [
@@ -12,7 +17,12 @@ import { ProductDetailComponent } from './product-detail.component';
   ],
   declarations: [
     AppComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    FooterComponent,
+    ProductComponent,
+    CategoriesComponent,
+    SliderComponent
+   
   ],
   bootstrap: [ AppComponent ]
 })

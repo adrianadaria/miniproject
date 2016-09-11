@@ -1,0 +1,21 @@
+ <div class="wrap">
+ <div class="row">
+
+    
+     <div class="prod" *ngFor="let product of products"
+        [class.selected]="product === selectedProduct"
+        (click)="onSelect(product)">
+        
+
+   <img [src]="product.brandurl">
+   <img [src]="product.imageurl">
+
+              <hr>
+              <p> {{product.name}} </p>
+             <button href="#" class="btn_price"> {{product.price | currency:'USD':true}} | GET NOW  ></button>
+
+
+      </div>
+ </div>
+ </div>
+    <my-product-detail [product]="selectedProduct"></my-product-detail>

@@ -13,6 +13,10 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var product_detail_component_1 = require('./product-detail.component');
+var footer_component_1 = require('./footer.component');
+var product_component_1 = require('./product.component');
+var categories_component_1 = require('./categories.component');
+var slider_component_1 = require('./slider.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +28,11 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                product_detail_component_1.ProductDetailComponent
+                product_detail_component_1.ProductDetailComponent,
+                footer_component_1.FooterComponent,
+                product_component_1.ProductComponent,
+                categories_component_1.CategoriesComponent,
+                slider_component_1.SliderComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
