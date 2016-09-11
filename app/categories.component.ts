@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 
@@ -9,6 +9,5 @@ import { Component, OnInit } from '@angular/core';
 
   
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent  {
   }
-}
