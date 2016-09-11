@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var ContactComponent = (function () {
+    function ContactComponent() {
     }
-    AppComponent = __decorate([
+    ContactComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n  <my-slider></my-slider>\n  <my-categories></my-categories>\n  \n  <my-products></my-products>\n  <my-footer></my-footer>\n  ",
-            styles: ["\n    .selected {\n      border:1px solid red;\n    }\n  \n  "]
+            selector: 'my-contact',
+            templateUrl: 'app/contact.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ContactComponent);
+    return ContactComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ContactComponent = ContactComponent;
+//# sourceMappingURL=contact.component.js.map

@@ -17,6 +17,7 @@ var footer_component_1 = require('./footer.component');
 var product_component_1 = require('./product.component');
 var categories_component_1 = require('./categories.component');
 var slider_component_1 = require('./slider.component');
+var contact_component_1 = require('./contact.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,7 +33,8 @@ var AppModule = (function () {
                 footer_component_1.FooterComponent,
                 product_component_1.ProductComponent,
                 categories_component_1.CategoriesComponent,
-                slider_component_1.SliderComponent
+                slider_component_1.SliderComponent,
+                contact_component_1.ContactComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

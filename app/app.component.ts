@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <my-slider></my-slider>
   <my-categories></my-categories>
+  
   <my-products></my-products>
   <my-footer></my-footer>
   `,

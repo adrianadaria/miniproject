@@ -8,6 +8,7 @@ import { FooterComponent} from './footer.component';
 import { ProductComponent} from './product.component';
 import { CategoriesComponent} from './categories.component';
 import { SliderComponent} from './slider.component';
+import { ContactComponent} from './contact.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SliderComponent} from './slider.component';
     FooterComponent,
     ProductComponent,
     CategoriesComponent,
-    SliderComponent
+    SliderComponent,
+    ContactComponent
    
   ],
   bootstrap: [ AppComponent ]
