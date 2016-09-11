@@ -310,7 +310,7 @@ content: "|";
 padding-right:15px;
 }
 
-nav li:first-child:before {
+.first_child:before {
 content: none;
 }
 
@@ -862,13 +862,168 @@ flex-direction: column;
 }
  
 
+/*Detail section*/
+
+.detail_section{
+	@include col(890px, 0px 40px 80px 40px, auto,none, relative)
+}
+
+.detail_section h1{
+	line-height: 10px;
+}
+.gallery_box{
+	float: left;
+	display: inline;
+	width: 400px;
+}
+.right_box{
+	float: right;
+	display: inline;
+	width: 400px;
+}
+
+.right_price{
+	padding-top: 100px;
+}
+.black_price{
+	background-color: red;
+	width: 100px;
+	height: 30px;
+	color:white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 22px;
+	margin-top:80px;
+	margin-left:141px;
+	margin-bottom:5px;
+	padding: 5px 0px 0px 10px;
+}
 
 
+.white_price{
+	background-color: white;
+	border: 1px solid #c7c7c7;
+	width: 250px;
+	height: 50px;
+	text-align: center;
+}
 
+.save{
+	float: right;
+	display: inline;
+	margin-top:-100px;
+}
+.save h5{
+	margin-top: 10px;
+}
 
+.right_box hr{
+	width: 100%;
+	margin-top: 30px;
+}
 
+.right_box p{
+	font-family: Arial;
+	color:#929292;
+	font-size: 12px;
+	text-align: justify;
+}
 
+.select_right{
+	float: right;
+}
 
+.select_right h6{
+	text-align: right;
+}
+
+.choose{
+	display: inline;
+	float:right;
+	margin-right: 30px;
+	margin-top: -20px;
+}
+.size{
+	float: left;
+	width: 50%;
+}
+.qty{
+	float: right;
+	width: 40%;
+}
+
+.button_add{
+	float: right;
+	margin-top:20px;
+	
+}
+select {
+    padding:5px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background: #fdfdfd;
+    color:#616161;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+	width: 150px;
+	font-style: italic;
+	font-family: Arial;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:'<>';
+    font:12px "Arial", monospace;
+    color:#616161;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:2px;
+    border-bottom:1px solid #fdfdfd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#fdfdfd;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  float: left;
+  padding-top: 100px;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  color:red;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color:red;
+}
 }
 
 @media only screen and (max-width: 959px) {
@@ -883,7 +1038,8 @@ flex-direction: column;
 	width: auto;	
 	margin: 0px 0px 0px 0px;
 	overflow-x: hidden;
-	
+	font-family: Arial;
+	font-size: 12px;
 }
 
 a {
@@ -1030,6 +1186,7 @@ word-spacing: 5px;
   font-size: 12px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -1040,6 +1197,7 @@ word-spacing: 5px;
   background-image: -o-linear-gradient(top, #ff1100, #ff1100);
   background-image: linear-gradient(to bottom, #ff1100, #ff1100);
   text-decoration: none;
+  cursor: pointer;
 }
 
 /*Menu*/

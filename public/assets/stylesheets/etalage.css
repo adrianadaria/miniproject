@@ -20,15 +20,17 @@
 /* Large thumbnail: */
 #etalage .etalage_thumb{
 	
-	border: 1px solid #eee;
+	border: 1px solid #cbd7c9;
 	padding: 6px;
+	background-color: #ffffff;
 	
 }
 
 
 /* Small thumbnails: */
 #etalage .etalage_small_thumbs li{
-	border: 1px solid #ddd;
+	border: 1px solid #cbd7c9;
+	background-color: #ffffff;
 	margin: 10px;
 	padding: 3px;
 	
