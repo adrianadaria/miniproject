@@ -4,15 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductComponent }   from './product.component';
 import { ContactComponent }  from './contact.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/products',
+    redirectTo: '/homepage',
     pathMatch: 'full'
   },
   {
-    path: 'products',
+    path: 'homepage',
     component: ProductComponent
+    
   },
   {
     path: 'contact',

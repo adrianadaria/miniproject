@@ -5,11 +5,11 @@ var contact_component_1 = require('./contact.component');
 var appRoutes = [
     {
         path: '',
-        redirectTo: '/products',
+        redirectTo: '/homepage',
         pathMatch: 'full'
     },
     {
-        path: 'products',
+        path: 'homepage',
         component: product_component_1.ProductComponent
     },
     {

@@ -1,9 +1,10 @@
- <my-categories></my-categories>
+<my-slider></my-slider>
+<my-categories></my-categories>
  <div class="wrap">
  <div class="row">
 
     
-     <div class="prod" *ngFor="let product of products"
+     <a routerLink="/contact" routerLinkActive="active"><div class="prod" *ngFor="let product of products"
         (click)="gotoDetail(product)">
         
 
@@ -15,7 +16,7 @@
              <button href="#" class="btn_price"> {{product.price | currency:'USD':true}} | GET NOW  ></button>
 
 
-      </div>
+      </div></a>
  </div>
  </div>
     <my-product-detail [product]="selectedProduct"></my-product-detail>

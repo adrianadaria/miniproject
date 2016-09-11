@@ -15,6 +15,7 @@ import { ProductService } from './product.service';
     }
   
   `],
+  
   providers: [ProductService]
 })
 export class ProductComponent implements OnInit {
@@ -29,7 +30,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts()
-      .then(products => this.products = products.slice(1, 5));
+      .then(products => this.products = products.slice(1, 8));
   }
 
   gotoDetail(product: Product): void {

@@ -20,7 +20,7 @@ var ProductComponent = (function () {
     ProductComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.productService.getProducts()
-            .then(function (products) { return _this.products = products.slice(1, 5); });
+            .then(function (products) { return _this.products = products.slice(1, 8); });
     };
     ProductComponent.prototype.gotoDetail = function (product) {
         var link = ['/detail', product.id];
