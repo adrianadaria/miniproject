@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from './product';
+
 @Component({
   selector: 'my-product-detail',
   template: `
@@ -14,6 +15,5 @@ import { Product } from './product';
   `
 })
 export class ProductDetailComponent {
-  @Input()
-  product: Product;
+  @Input() product: Product;
 }

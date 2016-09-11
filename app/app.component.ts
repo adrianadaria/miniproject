@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
-
+import { ProductService } from './product.service';
 
 
 @Component({
   selector: 'my-app',
   template: `
-<div class="row">
+ <div class="row">
 
     
      <div class="prod" *ngFor="let product of products"
@@ -32,12 +32,23 @@ import { Product } from './product';
       border:1px solid red;
     }
   
-  `]
+  `],
+  providers: [ProductService]
 })
-export class AppComponent {
-  title = 'Products';
+export class AppComponent implements OnInit {
   products: Product[];
   selectedProduct: Product;
+
+  constructor(private productService: ProductService) { }
+
+  getProducts(): void {
+    this.productService.getProducts().then(products => this.products = products);
+  }
+
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
   onSelect(product: Product): void {
     this.selectedProduct = product;
   }

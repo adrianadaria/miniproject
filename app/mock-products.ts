@@ -1,6 +1,6 @@
 import { Product } from './product';
 
-const PRODUCTS: Product[] = [
+export const PRODUCTS: Product[] = [
   { id: 11, price: 109.90, name: 'Nike Roshe Run Premium Holiday', brandurl:"/public/assets/images/brand.jpg", imageurl:"/public/assets/images/product.png"},
   { id: 12, price: 109.90, name: 'Line Link 67009', brandurl:"/public/assets/images/brand2.jpg", imageurl:"/public/assets/images/product2.png"},
   { id: 13, price: 120, name: 'Minimus Zero', brandurl:"/public/assets/images/brand3.jpg", imageurl:"/public/assets/images/product3.png" },

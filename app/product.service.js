@@ -9,10 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var mock_products_1 = require('./mock-products');
 var ProductService = (function () {
     function ProductService() {
     }
-    ProductService.prototype.getProducts = function () { }; // stub
+    ProductService.prototype.getProducts = function () {
+        return Promise.resolve(mock_products_1.PRODUCTS);
+    };
+    // See the "Take it slow" appendix
+    ProductService.prototype.getProductsSlowly = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            return setTimeout(resolve, 2000);
+        }) // delay 2 seconds
+            .then(function () { return _this.getProducts(); });
+    };
     ProductService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
