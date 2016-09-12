@@ -1,30 +1,44 @@
 <div class="wrap">
 <div class="container">
 <div id="form-main">
+  <div [hidden]="submitted">
   <div id="form-div">
-    <form class="form" id="form1">
+    <form class="form" id="form1" (ngSubmit)="register()" #contactForm="ngForm" novalidate>
       
       <p class="name">
-        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+        <input name="name" type="text" class="validate[] feedback-input" placeholder="Name" id="name" [(ngModel)]="model.name"  />
       </p>
       
       <p class="email">
-        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-      </p>
+        <input name="email" type="text" class="validate[] feedback-input" id="email" placeholder="Email" [(ngModel)]="model.email" />
+    
       
+      </p>
+      <p class="email">
+       <select name="subject" class="validate[] feedback-input" id="comment" placeholder="Select subject" [(ngModel)]="model.subject">
+        <option *ngFor="let s of subject" [value]="s">{{s}}</option>
+         
+    </select>
+      </p>
+
       <p class="text">
-        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+        <textarea name="text" class="validate[] feedback-input" id="comment" placeholder="Comment"></textarea>
       </p>
       
       
       <div class="submit">
-        <input type="submit" value="SEND" id="button-blue"/>
+        <input type="submit" value="SEND" id="button-blue" [disabled]="!contactForm.valid"/>
         <div class="ease"></div>
       </div>
     </form>
   </div>
+
 </div>
 
 
 
+</div>
+ <div [hidden]="!submitted">
+    <h3>Submision succesful</h3>
+    {{contact.name}} {{contact.email}} {{contact.subject}} 
 </div>

@@ -1,7 +1,12 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 
-
+class Contact{
+    name:string;
+    email:string;
+    subject:string;
+    
+}
 
 @Component({
   selector: 'my-contact',
@@ -10,6 +15,15 @@ import { Router } from '@angular/router';
 
   
 })
-export class ContactComponent{
-  constructor(private router: Router) { }
+export class ContactComponent {
+  subject = ["Ask about product","Return the product","Ask a question"];
+  model:Contact=new Contact();
+  constructor(private router: Router){ }
+  submitted = false;
+  register() {
+    this.submitted = true;
+  }
+
+ 
+   
   }

@@ -10,10 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var Contact = (function () {
+    function Contact() {
+    }
+    return Contact;
+}());
 var ContactComponent = (function () {
     function ContactComponent(router) {
         this.router = router;
+        this.subject = ["Ask about product", "Return the product", "Ask a question"];
+        this.model = new Contact();
+        this.submitted = false;
     }
+    ContactComponent.prototype.register = function () {
+        this.submitted = true;
+    };
     ContactComponent = __decorate([
         core_1.Component({
             selector: 'my-contact',
