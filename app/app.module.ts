@@ -9,6 +9,9 @@ import { ProductComponent} from './product.component';
 import { CategoriesComponent} from './categories.component';
 import { SliderComponent} from './slider.component';
 import { ContactComponent} from './contact.component';
+import { FilternavComponent }  from './filternav.component';
+
+
 import { routing } from './app.routing';
 
 
@@ -25,7 +28,9 @@ import { routing } from './app.routing';
     ProductComponent,
     CategoriesComponent,
     SliderComponent,
-    ContactComponent
+    ContactComponent,
+    FilternavComponent
+    
    
   ],
   bootstrap: [ AppComponent ]

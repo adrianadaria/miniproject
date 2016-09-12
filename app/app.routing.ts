@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductComponent }   from './product.component';
 import { ContactComponent }  from './contact.component';
+import { FilternavComponent }  from './filternav.component';
+
+
 
 
 const appRoutes: Routes = [
@@ -21,6 +24,10 @@ const appRoutes: Routes = [
     component: ContactComponent
   },
   
+    {
+    path: 'filternav',
+    component: FilternavComponent
+  },
   
 ];
 

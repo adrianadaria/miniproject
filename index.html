@@ -22,7 +22,35 @@
 <!--Slider-->
 <script src="public/assets/javascript/jquery.min.js"></script>
 <script src="public/assets/javascript/slider.js"></script>
-  
+  <!--Price range-->
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <!-- Javascript -->
+      <script>
+         $(function() {
+			 
+            $( "#slider-3" ).slider({
+               range:true,
+               min: 0,
+               max: 500,
+               values: [ 35, 200 ],
+               slide: function( event, ui 
+			   ) {
+                  $( "#price" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+               }
+			 
+           });
+$("#slider-3 .ui-slider-range").css({"background":"red"});
+$("#slider-3 .ui-slider-handle").css({"border-color":"white"});
+$("#slider-3 .ui-slider-handle").css({"background":"white"});
+$("#slider-3 .ui-slider").css({"height":"0.5em"});
+$("#slider-3 .ui-slider").css({"width":"250px"});
+
+         $( "#price" ).val( "$" + $( "#slider-3" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-3" ).slider( "values", 1 ) );
+         });
+      </script>
   </head>
   <!-- 3. Display the application -->
   <body>

@@ -18,6 +18,7 @@ var product_component_1 = require('./product.component');
 var categories_component_1 = require('./categories.component');
 var slider_component_1 = require('./slider.component');
 var contact_component_1 = require('./contact.component');
+var filternav_component_1 = require('./filternav.component');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -36,7 +37,8 @@ var AppModule = (function () {
                 product_component_1.ProductComponent,
                 categories_component_1.CategoriesComponent,
                 slider_component_1.SliderComponent,
-                contact_component_1.ContactComponent
+                contact_component_1.ContactComponent,
+                filternav_component_1.FilternavComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

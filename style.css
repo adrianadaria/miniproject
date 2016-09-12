@@ -267,7 +267,6 @@
     font-size: 0.875em;
     padding: 0.2em;
     width: 100%;
-    background-image: url("assets/images/search.png");
     transition: border-color 0.3s;
     -o-transition: border-color 0.3s;
     -ms-transition: border-color 0.3s;
@@ -276,7 +275,9 @@
   .search input[type="submit"] {
     position: absolute;
     top: 2px;
-    background-image: url("assets/images/search.png");
+    background-image: url("public/assets/images/search.png");
+    background-repeat: no-repeat;
+    background-color: none;
     border: none;
     outline: none;
     -webkit-appearance: none;
