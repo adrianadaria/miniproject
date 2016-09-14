@@ -18,7 +18,7 @@ var appRoutes = [
         component: contact_component_1.ContactComponent
     },
     {
-        path: 'filternav/:id',
+        path: 'detail/:id',
         component: filternav_component_1.FilternavComponent
     },
 ];
