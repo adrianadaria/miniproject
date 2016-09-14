@@ -25,7 +25,7 @@ const appRoutes: Routes = [
   },
   
     {
-    path: 'filternav',
+    path: 'filternav/:id',
     component: FilternavComponent
   },
   

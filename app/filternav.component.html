@@ -14,61 +14,19 @@
 
 <div class="detail_section">
 
-	<div class="gallery_box">
-							<h1>Men'sFootwear</h1>
-							<h5>Hookset Handcrafted Fabric Chukka</h5>
-							<img src="/public/assets/images/nike.png" />
+
+
+
+	<div class="gallery_box" *ngIf="product">
+							<h1>{{product.name}}</h1>
+							<h5>{{product.price}}</h5>
+
+
+
+                            <img [src]="product.brandurl">
+							<img class="gallery-picture" [src]="product.imageurl">
 					
-							<link rel="stylesheet" href="/public/assets/stylesheets/etalage.css">
-							<script src="/public/assets/javascript/jquery.etalage.min.js"></script>
-					
-						<script>
-								jQuery(document).ready(function($){
-					
-									$('#etalage').etalage({
-										thumb_image_width: 400,
-										thumb_image_height: 400,
-										source_image_width: 900,
-										source_image_height: 900,
-										show_hint: true,
-										click_callback: function(image_anchor, instance_id){
-											alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-										}
-									});
-								
-									$('.dropdownlist').change(function(){
-										etalage_show( $(this).find('option:selected').attr('class') );
-									});
-		
-							});
-						</script>
 						
-						
-								<ul id="etalage">
-									<li>
-										<a href="optionallink.html">
-											<img class="etalage_thumb_image" src="/public/assets/images/nike.png" />
-											<img class="etalage_source_image" src="/public/assets/images/nike.png" />
-										</a>
-									</li>
-									<li>
-										<img class="etalage_thumb_image" src="/public/assets/images/nike2.png" />
-										<img class="etalage_source_image" src="/public/assets/images/nike2.png" />
-									</li>
-									<li>
-										<img class="etalage_thumb_image" src="/public/assets/images/nike3.png" />
-										<img class="etalage_source_image" src="/public/assets/images/nike3.png" />
-									</li>
-									<li>
-										<img class="etalage_thumb_image" src="/public/assets/images/nike4.png" />
-										<img class="etalage_source_image" src="/public/assets/images/nike4.png" />
-									</li>
-									<li>
-										<img class="etalage_thumb_image" src="/public/assets/images/nike5.png" />
-										<img class="etalage_source_image" src="/public/assets/images/nike5.png" />
-									</li>
-									
-								</ul>
 	</div>
 								<div class="right_box">
                        <div class="rating">

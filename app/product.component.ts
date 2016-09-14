@@ -20,6 +20,7 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent implements OnInit {
   products: Product[] = [];
+ 
   
 
   constructor(private router: Router, private productService: ProductService) { }
@@ -34,7 +35,9 @@ export class ProductComponent implements OnInit {
   }
 
   gotoDetail(product: Product): void {
-    let link = ['/detail', product.id];
+    let link = ['/filternav', product.id];
     this.router.navigate(link);
   }
+ 
+ 
 }

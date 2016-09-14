@@ -4,9 +4,8 @@
  <div class="row">
 
     
-     <a routerLink="/filternav" routerLinkActive="active"><div class="prod" *ngFor="let product of products"
-        (click)="gotoDetail(product)">
-        
+   
+        <div class="prod" *ngFor="let product of products" (click)="gotoDetail(product)">
 
    <img [src]="product.brandurl">
    <img [src]="product.imageurl">
@@ -16,7 +15,8 @@
              <button href="#" class="btn_price"> {{product.price | currency:'USD':true}} | GET NOW  ></button>
 
 
-      </div></a>
+      </div>
+ 
  </div>
  </div>
-    <my-product-detail [product]="selectedProduct"></my-product-detail>
+ 

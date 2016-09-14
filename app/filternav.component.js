@@ -10,16 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var product_service_1 = require('./product.service');
 var FilternavComponent = (function () {
-    function FilternavComponent(router) {
-        this.router = router;
+    function FilternavComponent(route, productService) {
+        this.route = route;
+        this.productService = productService;
     }
+    FilternavComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.forEach(function (params) {
+            var id = +params['id'];
+            _this.productService.getProduct(id)
+                .then(function (product) { return _this.product = product; });
+        });
+    };
+    FilternavComponent.prototype.goBack = function () {
+        window.history.back();
+    };
     FilternavComponent = __decorate([
         core_1.Component({
             selector: 'my-filternav',
             templateUrl: 'app/filternav.component.html',
+            styles: ['.gallery-picture { width: 300px; margin-top:100px; }']
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, product_service_1.ProductService])
     ], FilternavComponent);
     return FilternavComponent;
 }());

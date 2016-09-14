@@ -19,6 +19,7 @@ var categories_component_1 = require('./categories.component');
 var slider_component_1 = require('./slider.component');
 var contact_component_1 = require('./contact.component');
 var filternav_component_1 = require('./filternav.component');
+var product_service_1 = require('./product.service');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -40,6 +41,7 @@ var AppModule = (function () {
                 contact_component_1.ContactComponent,
                 filternav_component_1.FilternavComponent
             ],
+            providers: [product_service_1.ProductService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

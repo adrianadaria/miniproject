@@ -23,7 +23,7 @@ var ProductComponent = (function () {
             .then(function (products) { return _this.products = products.slice(1, 8); });
     };
     ProductComponent.prototype.gotoDetail = function (product) {
-        var link = ['/detail', product.id];
+        var link = ['/filternav', product.id];
         this.router.navigate(link);
     };
     ProductComponent = __decorate([

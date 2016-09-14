@@ -10,8 +10,7 @@ import { CategoriesComponent} from './categories.component';
 import { SliderComponent} from './slider.component';
 import { ContactComponent} from './contact.component';
 import { FilternavComponent }  from './filternav.component';
-
-
+import { ProductService }  from './product.service';
 import { routing } from './app.routing';
 
 
@@ -30,9 +29,8 @@ import { routing } from './app.routing';
     SliderComponent,
     ContactComponent,
     FilternavComponent
-    
-   
   ],
+  providers: [ProductService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
